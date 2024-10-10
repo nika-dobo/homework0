@@ -154,6 +154,8 @@ forward(120)
 
 begin_fill()
 
+color("brown")
+
 left(60)
 forward(128)
 left(180)
