@@ -39,4 +39,4 @@ print(price2 * str(5))
 
 
 
-
+print("me mindobda gameumjobesina chemi programirebis unarebi amitomac gadavwyvite mepova programirebis kursebi da vipove sauketeso programirebis kursebi mtels msofloioshi GOA ( •̀ ω •́ )")
