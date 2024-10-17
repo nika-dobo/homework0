@@ -7,4 +7,4 @@ print(price)
 
 price2 = 100
 
-print(price2 * str(5))
+print(price2 * 5)
