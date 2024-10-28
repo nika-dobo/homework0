@@ -2,19 +2,11 @@
 
 
 
-
-
-
 me = 16
 deda = 36
 mama = 42
 
 
-print(me + deda + mama)
-print(me - deda - mama)
-print(me * deda * mama)
-print(me / deda / mama)
-
-
+print((me + deda + mama) / 3)
 
 
