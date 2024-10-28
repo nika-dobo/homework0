@@ -1,6 +1,7 @@
 # 3) გაიხსენეთ და დაწერეთ რამდენ ნაწილად იყოფა მონაცემები და მიუწერეთ მაგალითები
 
 
+
 #cven vicit mxolod 3 monaxcemta tipi rogoricaaa str int da floati
 
 
