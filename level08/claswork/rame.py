@@ -1,6 +1,0 @@
-
-
-
-print("rac ewera")
-
-
