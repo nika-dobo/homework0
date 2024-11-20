@@ -1,0 +1,23 @@
+# 3)
+# შეამოწმეთ, არის თუ არა მოცემული ციფრი დადებითი ან ნული, თუმცა არ არის უარყოფითი.
+
+
+
+num = input("enter number: ")
+
+
+if num < "0":
+    print("es ricxvi aris uaryofiti")
+
+elif num > "0":
+    print("es ricxvi aris dadebii")   
+    
+
+
+
+
+
+
+
+
+
