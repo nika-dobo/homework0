@@ -8,7 +8,7 @@ age = input("enter your age: ")
 if age < "18":
     print("shen xar axlagazrda")
 
-elif age >= "51":
+elif age > "50":
     print("shen xar moxuci")
     
 elif age >= "18" or age <= "50":

@@ -2,16 +2,16 @@
 
 
 
-num = input("enter number: ")
+num = int(input("enter number: "))
 
 
-if num >= "10" or num <= "50":
+if num >= 10 or num <= 50:
     print("es cifri arsis 10 meti da 50 naklebi")
 
-elif num < "10":
+elif num < 10:
     print("es aris 10 naklebi")
 
-elif num > "50":
+elif num > 50:
     print("esa aris 50meti")
 
 

@@ -3,21 +3,12 @@
 
 
 
-num = input("enter number: ")
+num = int(input("enter number: "))
 
 
-if num < "0":
+if num < 0:
     print("es ricxvi aris uaryofiti")
 
-elif num > "0":
+elif num > 0:
     print("es ricxvi aris dadebii")   
     
-
-
-
-
-
-
-
-
-
