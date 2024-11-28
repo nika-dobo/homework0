@@ -14,3 +14,20 @@ elif kurtaka == "True" and fexsacmeli == "False":
 
 else:
     print("ar shegizlia sesval")
+
+
+
+
+# # varianti 2
+
+
+
+# kurtaka = True
+# fexsacmeli = True
+
+
+# if kurtaka and fexsacmeli:
+#     print("shegizlia shesvla")
+# else:
+#     print("ar shegizlia sesval")
+
