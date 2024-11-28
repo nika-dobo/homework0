@@ -7,4 +7,7 @@ if age >= 17:
     print("shen xar didi biwi an gogo")
 
 else:
-    print("male gaizrdebi")    
+    print("male gaizrdebi") 
+
+
+            

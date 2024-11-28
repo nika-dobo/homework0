@@ -6,7 +6,7 @@ name = input("enter name: ")
 
 
 if name == "nika":
-    print("shen gaq chem nairi saxeli")
+    print("shen gaq chem nairi saxeli, sasiamovna gacnoba")
 
 else:
     print("sasiamovnoa gacnoba")    
