@@ -7,3 +7,9 @@ for i in range(num):
     if i % 5 == 0:
         print(i)
 
+# print(" ")
+
+# for i in range(num):
+#     if i % 3 == 0:
+#         print(i)
+
