@@ -5,7 +5,11 @@
 num = int(input("ente number: "))
 
 
-
-for i in range(2, num + 1, 2):
-    print(i)
-     
+if num % 2 == 0:
+    for i in range(2, num, 2):
+        print(i)
+        
+else:
+    for i in range(1, num, 2):
+        print(i)  
+        
