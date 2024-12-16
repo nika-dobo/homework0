@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>შესახებ</title>
+</head>
+
+<body>
+
+    <h1>შესახებ</h1>
+
+    <nav>
+        <ul>
+            <li><a href="./cw.html">მთავარი</a></li>
+            <li><a href="#">შესახებ</a></li>
+            <li><a href="./cw copy 3.html">კონტაქტი</a></li>
+        </ul>
+    </nav>
+
+
+
+
+</body>
+
+</html>
