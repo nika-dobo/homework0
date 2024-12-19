@@ -10,3 +10,4 @@ for i in range(ran):
     
 
 print(sum)   
+

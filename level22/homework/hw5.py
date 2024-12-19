@@ -2,10 +2,12 @@
 
 ran = int(input("enter your number: "))
 
-sum = 0
+sum = 1
 
-for i in range(ran):
-    sum *= i 
+for i in range(1, ran + 1):
+    sum = sum * i
     
 
 print(sum)   
+
+

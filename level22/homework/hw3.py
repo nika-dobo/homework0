@@ -6,7 +6,8 @@ ran = int(input("enter your number: "))
 sum = 0
 
 for i in range(ran):
-    sum += (i ** 2)
-    
+    sum += (i ** 2)# = (i * i)
+   
 
 print(sum)   
+

@@ -8,4 +8,9 @@ for i in range(ran):
     sum += i
     
 
-print(sum)    
+print(sum) 
+
+
+
+
+

@@ -4,8 +4,10 @@ ran = int(input("enter your number: "))
 
 sum = 0
 
-for i in range(ran):
+for i in range(1, ran + 1):
     sum += i
     
 
+
 print(sum / ran)
+
