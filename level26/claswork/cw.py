@@ -10,3 +10,4 @@ print(best_list[0:])
 print(best_list[-3:-1])
 
 print(best_list[3:7])
+
