@@ -8,7 +8,7 @@ city_list = ["თბილისი", "ბათუმი", "ქუთაის�
 
 print(city_list[2], city_list[5])
 
-print(city_list[2:3])
+print(city_list[2:4])
 
 city_list.reverse()
 print(city_list)

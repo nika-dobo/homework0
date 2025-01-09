@@ -4,3 +4,4 @@
 animals = ["dog", "cat", "elephant", "lion", "tiger"]
 
 print(animals[0], animals[-1], sep="|")
+

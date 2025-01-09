@@ -3,7 +3,9 @@
 
 qalaqi = ["Tbilisi", "Batumi", "Kutaisi", "Rustavi", "Gori", "Zugdidi", "Poti", "Telavi"]
 
+
 del qalaqi[2]
 del qalaqi[4]
+
 
 print(qalaqi)
