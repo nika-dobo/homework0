@@ -7,6 +7,6 @@ i = 0
 while i < len(num):
     del_num = int(input("what do you want to delete: "))
     num.pop(del_num)
-    i += 1
+    
 
 print(num)    
