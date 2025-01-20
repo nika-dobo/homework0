@@ -6,6 +6,6 @@ rezultati = []
 
 for i in range(len(num)):
     if num[i] % 2 == 0:
-        rezultati.append(i)
+        rezultati.append(num[i])
 
 print(rezultati)        
