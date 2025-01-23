@@ -2,13 +2,10 @@
 
 num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-even_num = []
+sum_of_even_numbers = 0
 
-for num in num:
-    if num % 2 == 0: 
-        even_num.append(num)  
+for i in range(len(num)):
+    if num[i] % 2 == 0: 
+         sum_of_even_numbers += num[i]
 
-sum_of_even_numbers = sum(even_num)
-
-for _ in range(10):
-    print(sum_of_even_numbers)
+print(sum_of_even_numbers)

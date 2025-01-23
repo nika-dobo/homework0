@@ -27,12 +27,12 @@ print(" შეყვანეთ პროდუქტის სახელი 
 cart = []
 
 while True:
-    choice = input("\nშეიყვანეთ პროდუქტის სახელი: ")
-    if choice.lower() == "stop":  
+    archevani = input("\nშეიყვანეთ პროდუქტის სახელი: ")
+    if archevani.lower() == "stop":  
         break
-    elif choice in pc_parts:
-        cart.append(choice)
-        print(f"{choice} დამატებულია კალათაში.")
+    elif archevani in pc_parts:
+        cart.append(archevani)
+        print(f"{archevani} დამატებულია კალათაში.")
     else:
         print("პროდუქტი ვერ მოიძებნა სცადეთ ხელახლა.")
 
