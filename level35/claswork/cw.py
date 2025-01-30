@@ -8,3 +8,6 @@ for i in range(len(num)):
 
 print(sum_num)        
 
+
+
+        

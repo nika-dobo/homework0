@@ -1,8 +1,6 @@
 from turtle import *
 
 
-
-
 #we wont paint house
 
 #ster 1 drew a squere
