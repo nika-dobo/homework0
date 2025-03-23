@@ -13,6 +13,9 @@ body {
   height: 100%;
   background: #141414;
 }
+section{
+    margin-top: 25px;
+}
 .content {
   margin: 0 auto;
   display: flex;
