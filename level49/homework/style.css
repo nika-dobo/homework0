@@ -71,4 +71,5 @@ button:hover{
     width: 310px;
     height: 45px;
     margin-top: -5px;
+    cursor: pointer;
 }
