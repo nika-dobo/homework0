@@ -1,0 +1,18 @@
+* {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+body {
+  background: url(https://images4.alphacoders.com/118/1188873.jpg) no-repeat center;
+  background-size: cover;
+}
+button {
+  background-color: black;
+  width: 100px;
+  height: 30px;
+}
+div {
+  border: 5px solid red;
+  width: 500px;
+  height: 500px;
+}
