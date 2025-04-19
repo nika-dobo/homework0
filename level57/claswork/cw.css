@@ -1,0 +1,42 @@
+#b{
+    width: 100px;
+    height: 50px;
+    font-size: large;
+    color: red;
+    background-color: black;
+}
+#b:hover{
+    width: 150px;
+    height: 60px;
+    font-size: xx-large;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
+}
+#b2{
+    width: 50px;
+    height: 50px;
+    font-size: large;
+    color: aqua;
+    background-color: rgb(0, 0, 0);
+}
+#b2:hover{
+    width: 150px;
+    height: 60px;
+    font-size: xx-large;
+    color: tan;
+    background-color: salmon;
+}
+#b3{
+    width: 200px;
+    height: 100px;
+    font-size: medium;
+    color: slateblue;
+    background-color: tomato;
+}
+#b3:hover{
+    width: 250px;
+    height: 150px;
+    font-size: xx-large;
+    color: aqua;
+    background-color: sienna;
+}
