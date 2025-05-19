@@ -1,0 +1,25 @@
+.main {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: blue;
+}
+.tvali {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+.child {
+  width: 100px;
+  height: 100px;
+  background: black;
+}
+.piri {
+  width: 300px;
+  height: 50px;
+  background: black;
+}
