@@ -25,6 +25,7 @@ body {
   border-radius: 10px;
   overflow: hidden;
   display: flex;
+  position: relative;
 }
 img {
   width: 50%;
@@ -54,14 +55,25 @@ p {
   margin-top: 70px;
   text-transform: uppercase;
 }
+.info p {
+  padding: 0px 0px 0px 60px;
+}
 b {
   font-weight: 900;
   color: white;
   font-size: 26px;
 }
-
 .bl {
   color: #ab5ed9;
   font-family: "Inter", sans-serif;
   font-size: 43px;
+}
+.background {
+  width: 50%;
+  height: 500px;
+  background-color: #ab5cd8;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  opacity: 55%;
 }
