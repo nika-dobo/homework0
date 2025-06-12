@@ -97,7 +97,7 @@ section .summary .info .box {
 }
 
 section .summary .info .rec {
-  background-color: hsla(0, 100%, 67%, 0.25);
+  background-color: hsla(0, 100%, 67%, 0.2);
   font-size: 1rem;
 }
 
@@ -106,7 +106,7 @@ section .summary .info .rec h2 {
 }
 
 section .summary .info .mem {
-  background-color: hsla(39, 100%, 56%, 0.25);
+  background-color: hsla(39, 100%, 56%, 0.2);
   font-size: 1rem;
 }
 
@@ -115,7 +115,7 @@ section .summary .info .mem h2 {
 }
 
 section .summary .info .ver {
-  background-color: hsla(166, 100%, 37%, 0.25);
+  background-color: hsla(166, 100%, 37%, 0.2);
   font-size: 1rem;
 }
 
@@ -124,7 +124,7 @@ section .summary .info .ver h2 {
 }
 
 section .summary .info .vis {
-  background-color: hsla(234, 85%, 45%, 0.25);
+  background-color: hsla(234, 85%, 45%, 0.2);
   font-size: 1rem;
 }
 
@@ -133,11 +133,11 @@ section .summary .info .vis h2 {
 }
 
 section .summary .info p {
-  color: hsl(221, 100%, 96%);
+  color: hsl(222, 20%, 73%);
 }
 
 section .summary .info b {
-  color: hsl(224, 30%, 27%);
+  color: hsl(224, 30%, 21%);
 }
 
 section .summary button {
