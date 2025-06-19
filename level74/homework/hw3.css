@@ -22,6 +22,8 @@ section {
   gap: 10px;
   justify-content: center;
   align-content: center;
+  justify-items: center;
+  align-items: center;
 }
 div {
   width: 75px;
