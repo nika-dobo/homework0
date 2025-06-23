@@ -13,8 +13,6 @@ body {
 }
 
 section {
-  width: 750px;
-  height: 650px;
   border: 2px solid slateblue;
   display: grid;
   grid-template-columns: 100px 100px 100px 100px 100px;
