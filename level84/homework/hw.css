@@ -25,7 +25,7 @@ header {
 
 .navigation {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 0.5fr;
   grid-template-rows: 1fr;
   align-items: center;
   gap: 125px;
@@ -40,6 +40,7 @@ nav {
   align-items: center;
   font-size: 16px;
   font-weight: 700;
+  grid-column: 1/2;
 }
 
 nav p {
@@ -56,6 +57,7 @@ nav p:hover {
   color: white;
   cursor: pointer;
   display: none;
+  
 }
 
 .dropdown {
@@ -89,6 +91,7 @@ nav p:hover {
 
 .logo {
   width: 80px;
+  grid-column: 2/3;
 }
 
 header .icons {
@@ -279,6 +282,11 @@ a {
   }
   .navigation {
     gap: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+  nav{
+    grid-column: 2/3;
+    grid-row: 1/2;
   }
   .logo {
     padding: 10px;
@@ -329,7 +337,10 @@ a {
 
 @media (max-width: 475px) {
   .navigation {
-    gap: 250px;
+    padding: 10px;
+    width: 375px;
+    display: flex;
+    justify-content: space-between;
   }
   nav {
     display: none;
