@@ -468,7 +468,8 @@ a {
   }
 
   .colors {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 300px;
   }
 }
 
@@ -489,6 +490,9 @@ a {
   }
   .section-1 .main img {
     max-width: 375px;
+  }
+  .colors {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -520,4 +524,9 @@ a {
     font-weight: 700;
     padding: 10px;
   }
+
+  .section-4{
+    margin-top: 450px;
+  }
 }
+
