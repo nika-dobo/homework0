@@ -575,6 +575,7 @@ footer .img img {
 footer .right{
   display: flex;
   gap: 80px;
+  padding: 20px;
 }
 
 footer .right div{
