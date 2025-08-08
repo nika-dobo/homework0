@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  padding: 40px 20px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 75px;
+}
+
+.head h1 {
+  color: #5846fb;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.head nav {
+  width: 678px;
+  height: 80px;
+  padding: 0px 20px;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 100px;
+}
+
+.head nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.head div {
+  width: 100px;
+}
+
+@media (max-width: 900px) {
+  .head nav {
+    transform: scale(0.8);
+  }
+  .head nav a {
+    font-size: 16px;
+  }
+  .head div {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  /* burger menu */
+}
