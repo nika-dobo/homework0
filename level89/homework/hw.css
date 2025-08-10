@@ -20,6 +20,8 @@ header {
   justify-content: center;
   background-color: black;
   padding: 40px 20px;
+  gap: 100px;
+  border-radius: 0px 0px 60px 60px;
 }
 
 .head {
@@ -27,22 +29,21 @@ header {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  gap: 75px;
+  gap: 50px;
 }
 
 .head h1 {
   color: #5846fb;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 500;
 }
 
 .head nav {
-  width: 678px;
-  height: 80px;
+  width: 500px;
+  height: 65px;
   padding: 0px 20px;
   display: flex;
-  gap: 50px;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background-color: white;
   border-radius: 100px;
@@ -52,14 +53,95 @@ header {
   text-decoration: none;
   color: #000;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .head div {
-  width: 100px;
+  width: 150px;
 }
 
-@media (max-width: 900px) {
+header .bottom {
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 75px;
+  align-items: center;
+}
+
+header .bottom .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+header .bottom h1 {
+  color: white;
+  font-size: 90px;
+  text-align: center;
+  max-width: 700px;
+}
+
+header .bottom p {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  max-width: 400px;
+}
+
+button {
+  background-color: #5846fb;
+  border-radius: 100px;
+  border: none;
+  color: white;
+  padding: 18px 45px;
+  font-size: 14px;
+}
+
+header .conteiners {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 0px 20px;
+  gap: 25px;
+}
+
+header .conteiners h3 {
+  font-size: 24px;
+}
+
+header .conteiners .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+header .conteiners .content div {
+  width: 300px;
+  height: 125px;
+  background-color: #1f2123;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+header .conteiners .content div img {
+  width: 50px;
+}
+
+header .conteiners .content div p {
+  font-size: 16px;
+  text-align: left;
+  max-width: 170px;
+}
+
+@media (max-width: 1000px) {
   .head nav {
     transform: scale(0.8);
   }
@@ -69,8 +151,10 @@ header {
   .head div {
     display: none;
   }
-}
-
-@media (max-width: 500px) {
-  /* burger menu */
+  header .bottom h1 {
+    font-size: 50px;
+  }
+  header .bottom p {
+    font-size: 18px;
+  }
 }
