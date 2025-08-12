@@ -250,6 +250,63 @@ main {
   padding: 25px;
 }
 
+.section-2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 150px;
+  gap: 75px;
+}
+
+.section-2 h1 {
+  font-size: 60px;
+  font-weight: 700;
+  max-width: 600px;
+  text-align: center;
+}
+
+.section-2 .conteiners {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.section-2 .conteiners .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: 45px;
+  background-color: #f0f0f0;
+  max-width: 400px;
+  height: 500px;
+  border-radius: 30px;
+}
+
+.section-2 .conteiners .box div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-2 .conteiners .box div h2 {
+  font-size: 45px;
+  font-weight: 400;
+}
+
+.section-2 .conteiners .box div a {
+  text-decoration: none;
+  color: #5846fb;
+}
+
+.section-2 .last{
+  color: #000;
+  font-size: 20px;
+}
+
 @media (max-width: 1000px) {
   .head nav {
     transform: scale(0.8);
@@ -265,5 +322,26 @@ main {
   }
   header .bottom p {
     font-size: 18px;
+  }
+  .section-1 .bottom .first {
+    font-size: 2rem;
+  }
+  .section-1 .bottom .center h1 {
+    font-size: 2rem;
+  }
+  .section-1 .bottom .last h1 {
+    font-size: 0.7rem;
+  }
+  .section-1 .bottom {
+    width: 400px;
+    grid-template-columns: 0.8fr 0.4fr 1fr;
+    grid-template-rows: repeat(3, 90px);
+  }
+  .section-1 .bottom .second{
+    height: 90px;
+    width: auto;
+  }
+  .section-2 .conteiners{
+    gap: 75px;
   }
 }
