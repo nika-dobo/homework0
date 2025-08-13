@@ -146,7 +146,6 @@ main {
   flex-direction: column;
   width: 100%;
   align-items: center;
-  padding: 20px;
   margin-top: 150px;
 }
 
@@ -302,9 +301,115 @@ main {
   color: #5846fb;
 }
 
-.section-2 .last{
+.section-2 .last {
   color: #000;
   font-size: 20px;
+}
+
+.section-3 {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #000;
+  border-radius: 60px;
+  padding: 20px;
+}
+
+.section-3 .contntent-1 {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.section-3 .contntent-1 .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  max-width: 550px;
+  gap: 30px;
+}
+
+.section-3 .contntent-1 .left h4 {
+  font-size: 25px;
+  color: #5846fb;
+  font-weight: 400;
+}
+
+.section-3 .contntent-1 .left h1 {
+  font-size: 60px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.section-3 .contntent-1 .left p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.section-3 .contntent-1 .right {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.section-3 .contntent-1 .right .first {
+  width: 200px;
+}
+
+.section-3 .contntent-1 .right .second {
+  width: 400px;
+}
+
+.section-3 .contntent-2 {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 0px 20px;
+  gap: 25px;
+}
+
+.section-3 .contntent-2 h3 {
+  font-size: 60px;
+  margin-left: 25px;
+  max-width: 400px;
+}
+
+.section-3 .contntent-2 .content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.section-3 .contntent-2 .content div {
+  width: 300px;
+  height: 125px;
+  background-color: #1f2123;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.section-3 .contntent-2 .content div img {
+  width: 50px;
+}
+
+.section-3 .contntent-2 .content div p {
+  font-size: 22px;
+  text-align: left;
+  max-width: 170px;
 }
 
 @media (max-width: 1000px) {
@@ -337,11 +442,32 @@ main {
     grid-template-columns: 0.8fr 0.4fr 1fr;
     grid-template-rows: repeat(3, 90px);
   }
-  .section-1 .bottom .second{
+  .section-1 .bottom .second {
     height: 90px;
     width: auto;
   }
-  .section-2 .conteiners{
+  .section-2 .conteiners {
     gap: 75px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-3 .contntent-1 .left h4 {
+    font-size: 20px;
+  }
+  .section-3 .contntent-1 .left h1 {
+    font-size: 45px;
+  }
+  .section-3 .contntent-1 .left p {
+    font-size: 16px;
+  }
+  .section-3 .contntent-1 .right .first {
+    width: 150px;
+  }
+  .section-3 .contntent-1 .right .second {
+    width: 300px;
+  }
+  .section-3 .contntent-2 h3{
+    font-size: 45px;
   }
 }
