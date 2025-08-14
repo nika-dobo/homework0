@@ -497,6 +497,7 @@ footer .top div {
 }
 
 footer .bottom {
+  margin-top: 50px;
   width: 100%;
   display: flex;
   justify-content: space-between;
