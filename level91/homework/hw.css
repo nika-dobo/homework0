@@ -368,6 +368,12 @@ footer .bottom {
   footer {
     padding: 100px 20px 20px;
   }
+  footer .main .left {
+    margin: 0 auto;
+  }
+  footer .main .right {
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 600px) {
@@ -378,7 +384,7 @@ footer .bottom {
     max-width: 300px;
     margin: 0 auto;
   }
-  footer .main .right div{
+  footer .main .right div {
     padding-top: 25px;
     border-top: 1px black solid;
   }
