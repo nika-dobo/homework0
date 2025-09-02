@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 :root {
   --space: 0px 8%;
+  --arrow: 7%;
+  --arrow2: 45%;
 }
 
 * {
@@ -437,9 +439,183 @@ main {
   align-items: center;
 }
 
+.section-4 {
+  width: 100%;
+  background-color: #303231;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 130px;
+}
+
+.section-4 .bk {
+  width: 383px;
+  height: 383px;
+  background-color: #3d3f3e;
+  position: absolute;
+  transform: rotate(45deg);
+  right: -190px;
+  top: -190px;
+  z-index: 0;
+}
+
+.section-4 h2 {
+  font-family: "Sansation", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  color: white;
+  padding: 25px 20px;
+  z-index: 1;
+}
+
+.section-4 .first {
+  display: flex;
+  width: 100%;
+  min-height: 468px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.section-4 .first .left {
+  position: absolute;
+  left: var(--arrow);
+  z-index: 3;
+  top: var(--arrow2);
+}
+
+.section-4 .first .right {
+  position: absolute;
+  right: var(--arrow);
+  z-index: 3;
+  top: var(--arrow2);
+  transform: rotate(180deg);
+}
+
+.section-4 .first .car {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 468px;
+}
+
+.section-4 .first .car img {
+  width: 71.3%;
+  z-index: 3;
+}
+
+.section-4 .first .car .podium {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  height: 224px;
+  align-items: center;
+  top: -170px;
+}
+
+.section-4 .first .car .podium .top {
+  width: 80%;
+  height: 96%;
+  background-color: #303231;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  top: -10px;
+}
+
+.section-4 .first .car .podium .bottom {
+  width: 80%;
+  height: 96%;
+  background-color: #656565;
+  border-radius: 50%;
+  box-shadow: 0px 6px 16px #0000008c;
+  position: absolute;
+  z-index: 1;
+}
+
+.section-4 .second {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 65px;
+  margin-top: -90px;
+  padding-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.section-4 .second img {
+  width: 137px;
+  height: 137px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.section-5 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 200px 20px;
+}
+
+.section-5 .main {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 604px;
+  margin-left: 130px;
+}
+
+.section-5 .main h2 {
+  font-weight: 400;
+  font-size: 36px;
+  font-family: "Sansation", sans-serif;
+  color: #303231;
+}
+
+.section-5 .main p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 227%;
+  max-width: 574px;
+  color: #333333;
+}
+
+.section-5 .main button {
+  width: 274px;
+  height: 54px;
+  color: #ffffff;
+  background-color: #003478;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+}
+
+.section-5 img {
+  position: absolute;
+  width: 1585px;
+  right: -800px;
+  z-index: -1;
+}
+
 @media (max-width: 1350px) {
   .section-1 h1 {
     color: #956607;
+  }
+  .section-5 .main {
+    margin-left: 100px;
+  }
+  .section-5 img {
+    width: 1285px;
+    right: -700px;
   }
 }
 
@@ -447,11 +623,51 @@ main {
   .section-3 .main .inch {
     max-width: 40%;
   }
+  .section-5 .main {
+    margin-left: 80px;
+  }
+  .section-5 img {
+    position: absolute;
+    width: 1085px;
+    right: -550px;
+  }
 }
 
 @media (max-width: 1075px) {
   .section-2 .main .right {
     display: none;
+  }
+  :root {
+    --arrow2: 30%;
+  }
+  .section-4 .second {
+    margin-top: -150px;
+    gap: 25px;
+  }
+  .section-4 .second img {
+    width: 100px;
+    height: 100px;
+  }
+  .section-5 .main {
+    margin-left: 60px;
+  }
+  .section-5 .main h2 {
+    font-weight: 400;
+    font-size: 30px;
+    font-family: "Sansation", sans-serif;
+    color: #303231;
+  }
+  .section-5 .main p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 227%;
+    max-width: 400px;
+    color: #333333;
+  }
+  .section-5 img {
+    position: absolute;
+    width: 900px;
+    right: -450px;
   }
 }
 
@@ -491,17 +707,73 @@ main {
   .section-3 .second {
     flex-direction: column-reverse;
   }
+  .section-4 .second {
+    gap: 25px;
+  }
+  .section-5 .main {
+    margin-left: 60px;
+  }
+  .section-5 .main h2 {
+    font-weight: 400;
+    font-size: 26px;
+    font-family: "Sansation", sans-serif;
+    color: #303231;
+  }
+  .section-5 .main p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 227%;
+    max-width: 400px;
+    color: #333333;
+  }
+  .section-5 .main button {
+    width: 200px;
+    height: 35px;
+    font-size: 14px;
+  }
+  .section-5 img {
+    position: absolute;
+    width: 800px;
+    right: -450px;
+  }
 }
 
 @media (max-width: 650px) {
   :root {
     --space: 0px 4%;
+    --arrow: 3%;
+    --arrow2: 25%;
   }
   .section-2 .main .left {
     display: none;
   }
   .section-3 .rame {
-    border-top: 1px #BCBCBC solid;
+    border-top: 1px #bcbcbc solid;
+  }
+  .section-4 .first .left {
+    transform: scale(0.8);
+  }
+  .section-4 .first .right {
+    transform: scale(0.8) rotate(180deg);
+  }
+  .section-4 .first .car .podium {
+    top: -130px;
+  }
+  .section-4 .first .car .podium .top {
+    height: 150px;
+  }
+  .section-4 .first .car .podium .bottom {
+    height: 150px;
+  }
+  .section-4 .second img {
+    width: 80px;
+    height: 80px;
+  }
+  .section-5 .main {
+    margin-left: 0px;
+  }
+  .section-5 img {
+    display: none;
   }
 }
 
@@ -517,5 +789,20 @@ main {
   }
   .section-1 .second .box .line:first-of-type p span {
     font-size: 20px;
+  }
+  .section-4 .first .left {
+    transform: scale(0.6);
+  }
+  .section-4 .first .right {
+    transform: scale(0.6) rotate(180deg);
+  }
+  .section-4 .first .car .podium {
+    top: -80px;
+  }
+  .section-4 .first .car .podium .top {
+    height: 100px;
+  }
+  .section-4 .first .car .podium .bottom {
+    height: 100px;
   }
 }
