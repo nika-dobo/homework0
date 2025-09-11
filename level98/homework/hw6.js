@@ -4,7 +4,7 @@ let num11 = Number(prompt("enter number: "));
 
 if (num11 > 50 && num11 % 2 == 0) {
   console.log("more than 50 and Even");
-} else if (num1 < 50 && num11 > 0) {
+} else if (num11 < 50 && num11 > 0 && num11 % 2 != 0) {
   console.log("This number is less than 50 and more than 0 and is also Odd");
 } else {
   console.log("this number is negative");
