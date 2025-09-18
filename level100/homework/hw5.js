@@ -41,8 +41,23 @@ if (num1 > num2 && num1 > num3) {
 
 if (num1 < num2 && num1 < num3) {
   console.log(num1);
+  if (num1 % 2 == 0) {
+    console.log("ყველაზე პატარა რიცხვი ლუწია");
+  } else {
+    console.log("ყველაზე პატარა რიცხვი კენტია");
+  }
 } else if (num2 < num1 && num2 < num3) {
   console.log(num2);
+  if (num2 % 2 == 0) {
+    console.log("ყველაზე პატარა რიცხვი ლუწია");
+  } else {
+    console.log("ყველაზე პატარა რიცხვი კენტია");
+  }
 } else {
   console.log(num3);
+  if (num3 % 2 == 0) {
+    console.log("ყველაზე პატარა რიცხვი ლუწია");
+  } else {
+    console.log("ყველაზე პატარა რიცხვი კენტია");
+  }
 }
