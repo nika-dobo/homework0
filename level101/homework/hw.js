@@ -12,3 +12,6 @@ for (let i = 1; i < num; i++) {
     odd++;
   }
 }
+
+console.log(even);
+console.log(odd);

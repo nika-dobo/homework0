@@ -3,11 +3,11 @@ let trys = 0;
 
 while (true) {
   let name = prompt("enter name");
+  trys++;
   if (name == "nika") {
-    console.log("you guessed my name and your attempts is :", name);
+    console.log("you guessed my name and your attempts is :", trys);
     break;
   } else {
-    console.log("try again");
-    trys++
+    console.log("try again. your attempts is :", trys);
   }
 }
