@@ -2,18 +2,18 @@
 
 // დააბრუნოს შედეგი.
 
-function bigest(a, b, c) {
-  a = Number(prompt("enter num"));
-  b = Number(prompt("enter num"));
-  c = Number(prompt("enter num"));
+let num1 = Number(prompt("enter num"));
+let num2 = Number(prompt("enter num"));
+let num3 = Number(prompt("enter num"));
 
-  if (a > b && a > c) {
+function bigest(a, b, c) {
+  if (a >= b && a >= c) {
     console.log(a);
-  } else if (b > a && b > c) {
+  } else if (b >= a && b >= c) {
     console.log(b);
   } else {
     console.log(c);
   }
 }
 
-bigest();
+bigest(num1, num2, num3);

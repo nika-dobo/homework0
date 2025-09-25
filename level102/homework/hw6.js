@@ -17,3 +17,5 @@ function big(a, b) {
     console.log("patara jami");
   }
 }
+
+big(43,56)

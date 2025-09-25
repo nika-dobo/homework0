@@ -17,4 +17,4 @@ function evenOrOdd(start, end) {
   }
 }
 
-console.log(evenOrOdd(3, 54));
+evenOrOdd(3, 54);

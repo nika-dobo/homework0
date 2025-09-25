@@ -18,3 +18,5 @@ function point(p1, p2, p3) {
     console.log("უარყოფითი შედეგი");
   }
 }
+
+point(34, 45, 98);
