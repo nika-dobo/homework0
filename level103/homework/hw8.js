@@ -15,3 +15,4 @@ function count(arr) {
 }
 
 count([34, 562, 3, 355, 4, 54, "asda", "sda", "dfg", "gdfg"]);
+

@@ -4,7 +4,7 @@ function countEvenOdd(arr) {
   let odd = 0;
   let even = 0;
   for (let i = 0; i < arr.length; i++) {
-    if (i % 2 == 0) {
+    if (arr[i] % 2 == 0) {
       even++;
     } else {
       odd += arr[i];
