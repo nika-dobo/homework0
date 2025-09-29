@@ -1,10 +1,10 @@
 // 2)დაწერე ფუნქცია countEvenOdd(arr), რომელიც მიიღებს რიცხვების სიას და დაბეჭდავს რამდენია ლუწი და რამდენი კენტი.
 
 function countEvenOdd(arr) {
-  odd = 0;
-  even = 0;
+  let odd = 0;
+  let even = 0;
   for (let i = 0; i < arr.length; i++) {
-    if (i % 2 == 0) {
+    if (arr[i] % 2 == 0) {
       even++;
     } else {
       odd++;

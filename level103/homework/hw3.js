@@ -1,7 +1,7 @@
 //3)შექმენი ფუნქცია findMax(arr) – მიიღოს სია და დააბრუნოს უდიდესი რიცხვი. (შეგიძლიათ მოიძიოთ და გააკეთოთ, საჭროა ლოგიკის დაწერა რომ ეს დავალება შეასრულოთ)
 
 function findMax(arr) {
-  max = arr[0];
+  let max = arr[0];
   for (let i = 0; i < arr.length; i++) {
     if (max < arr[i]) {
       max = arr[i];
