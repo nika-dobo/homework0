@@ -12,7 +12,6 @@ function func(names) {
   for (let i = 0; i < newList.length; i++) {
     if (newList[i][0] == "ა") {
       newList.splice(i, 1);
-      i--;
     }
   }
 
