@@ -4,7 +4,7 @@
 let person = {
   name: "nika",
   age: "17",
-  city: "tbilist",
+  city: "tbilisi",
 };
 
 console.log(person.name);
