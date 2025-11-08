@@ -12,10 +12,10 @@ let movie = {
 let key = Object.keys(movie);
 let value = Object.values(movie);
 
-for (let i in key) {
+for (let i of key) {
   console.log(i);
 }
 
-for (let i in value) {
+for (let i of value) {
   console.log(i);
 }
