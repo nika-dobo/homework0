@@ -10,7 +10,7 @@ let student = {
 };
 
 for (let i in student) {
-  if (student[i].student = 3) {
+  if (student[i].lenght = 3) {
     console.log(student[i]);
   }
 }
