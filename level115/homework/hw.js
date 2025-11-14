@@ -2,4 +2,5 @@
 
 
 
-console.log(Math.floor(prompt("enter num")));
+console.log(Math.floor(Number(prompt("enter num"))));
+

@@ -4,7 +4,7 @@
 arr = [];
 
 for (let i = 0; i < 5; i++) {
-  arr.push(Math.floor(Math.random(1, 100)));
+  arr.push(Math.floor(Math.random() * 100));
 }
 
 console.log(Math.min(...arr));

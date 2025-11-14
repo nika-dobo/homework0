@@ -1,4 +1,3 @@
 // 2)მომხმარებელს შემოატანინე ათწილადი და გამოიტანე მისი მომდევნო მთელი რიცხვი Math.ceil()-ის გამოყენებით.
 
-
-console.log(Math.ceil(prompt("enter num")));
+console.log(Math.ceil(Number(prompt("enter num"))));
