@@ -2,11 +2,10 @@
 
 let h1 = document.getElementsByTagName("h1");
 
-h1[0].innerHTML = ("dasd");
-h1[1].innerHTML = ("das");
-h1[2].innerHTML = ("asd");
-h1[3].innerHTML = ("gfd");
-h1[4].innerHTML = ("gdf");
-
+h1[0].innerHTML = "dasd";
+h1[1].innerHTML = "das";
+h1[2].innerHTML = "asd";
+h1[3].innerHTML = "gfd";
+h1[4].innerHTML = "gdf";
 
 console.log(h1);

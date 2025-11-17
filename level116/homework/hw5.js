@@ -8,4 +8,4 @@ let p2 = document.getElementById("p2");
 let p11 = p1.textContent;
 
 p1.textContent = p2.textContent;
-p2.textContent = temp;
+p2.textContent = p11;
