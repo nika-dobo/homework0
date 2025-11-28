@@ -106,3 +106,12 @@ audio {
   position: absolute;
   opacity: 0;
 }
+
+@media (max-width: 600px) {
+  .main {
+    transform: scale(0.65);
+  }
+  .bk-div {
+    transform: scale(0.65);
+  }
+}
