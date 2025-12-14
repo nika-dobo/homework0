@@ -22,6 +22,11 @@ const collorArr = [
   "D",
   "E",
   "F",
+  "a",
+  "b",
+  "c",
+  "d",
+  "f",
 ];
 
 let code = "";
@@ -34,6 +39,8 @@ span.style.color = `#${code}`;
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+  err.textContent = ``;
+
   if (e.target.Color.value.length > 0) {
     code = e.target.Color.value;
     body.style.backgroundColor = `#${code}`;
@@ -48,7 +55,7 @@ form.addEventListener("submit", function (e) {
       return;
     }
     for (let i of e.target.Color.value) {
-      if (!collorArr.includes(e.target.Color.value[i])) {
+      if (!collorArr.includes(i)) {
         code = "Error";
         span.textContent = `${code}`;
         span.style.color = "red";
@@ -57,8 +64,6 @@ form.addEventListener("submit", function (e) {
         return;
       }
     }
-
-    e.target.Color.value = "";
   } else if (e.target.Color.value.length == 0) {
     let code = "";
     for (let i = 0; i < 6; i++) {
@@ -69,5 +74,5 @@ form.addEventListener("submit", function (e) {
     span.style.color = `#${code}`;
     err.textContent = ``;
   }
+  e.target.Color.value = "";
 });
-
