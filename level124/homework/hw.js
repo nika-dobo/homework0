@@ -37,6 +37,8 @@ body.style.backgroundColor = `#${code}`;
 span.textContent = `#${code}`;
 span.style.color = `#${code}`;
 
+err.style.fontSize = "36px"
+
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   err.textContent = ``;
