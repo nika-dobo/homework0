@@ -1,6 +1,6 @@
 const body = document.body;
 const video = document.getElementById("video");
-const newYear = new Date();
+const newYear = new Date("2026-1-1");
 
 function time() {
   const now = new Date();
