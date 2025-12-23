@@ -1,10 +1,10 @@
 const body = document.body;
 const video = document.getElementById("video");
-const newYear = new Date("2026-1-1");
+let newYear = new Date("2026-1-1");
 
 function time() {
   const now = new Date();
-  let distance = newYear - now;
+  let distance = newYear - now - 14400000;
 
   if (distance <= 0) {
     document.getElementById("dey").textContent = 0;
@@ -34,3 +34,14 @@ if (distance <= 0) {
   body.appendChild(txt);
   video.style.display = "block";
 }
+
+let form = document.getElementById("form");
+
+form.addEventListener("change", function (e) {
+  year = new Date(e.target.value);
+  if (now > year) {
+    alert("enter feature not past");
+  } else {
+    newYear = year;
+  }
+});
