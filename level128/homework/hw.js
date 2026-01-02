@@ -54,3 +54,14 @@ heratChanger.addEventListener("click", function () {
 });
 
 setInterval(changeTiem, 1000);
+
+const buyTab = document.getElementById("buy-tab");
+const buy = document.getElementById("buy");
+
+buy.addEventListener("click", function () {
+  buyTab.style.display = "flex";
+});
+
+buyTab.addEventListener("click", function () {
+  buyTab.style.display = "none";
+});
