@@ -65,3 +65,13 @@ buy.addEventListener("click", function () {
 buyTab.addEventListener("click", function () {
   buyTab.style.display = "none";
 });
+
+const rate = document.getElementById("rate");
+
+rate.textContent = Math.floor(Math.random() * 60) + 50;
+
+function heratRateChanger() {
+  rate.textContent = Math.floor(Math.random() * 60) + 50;
+}
+
+setInterval(heratRateChanger, 20000);
