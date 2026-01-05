@@ -182,6 +182,7 @@ h1 {
   justify-content: center;
   z-index: 10;
   padding: 15px;
+  background-color: rgba(0, 0, 0, 0.245);
 }
 
 #buy-tab p {
@@ -212,5 +213,9 @@ h1 {
   }
   .info p {
     font-size: 0.8rem;
+  }
+
+  #herat-rate {
+    transform: scale(0.7);
   }
 }
