@@ -74,18 +74,12 @@ function heratRateChanger() {
   let randomNumber = Math.floor(Math.random() * 2);
   let change = Math.floor(Math.random() * 6) + 1;
 
-  if (randomNumber === 0) {
+  if (randomNumber === 0 || heratRateChangerNumber >= 110) {
     heratRateChangerNumber += change;
-  } else {
+  } else if (randomNumber !== 0 || heratRateChangerNumber <= 60) {
     heratRateChangerNumber -= change;
   }
-
-  if (heratRateChangerNumber >= 110) {
-    heratRateChangerNumber -= change;
-  } else if (heratRateChangerNumber <= 60) {
-    heratRateChangerNumber += change;
-  }
-
+  
   rate.textContent = heratRateChangerNumber;
 }
 
