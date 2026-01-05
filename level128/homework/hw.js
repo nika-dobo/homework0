@@ -68,10 +68,25 @@ buyTab.addEventListener("click", function () {
 
 const rate = document.getElementById("rate");
 
-rate.textContent = Math.floor(Math.random() * 60) + 50;
+let heratRateChangerNumber = Math.floor(Math.random() * 60) + 50;
 
 function heratRateChanger() {
-  rate.textContent = Math.floor(Math.random() * 60) + 50;
+  let randomNumber = Math.floor(Math.random() * 2);
+  let change = Math.floor(Math.random() * 6) + 1;
+
+  if (randomNumber === 0) {
+    heratRateChangerNumber += change;
+  } else {
+    heratRateChangerNumber -= change;
+  }
+
+  if (heratRateChangerNumber >= 110) {
+    heratRateChangerNumber -= change;
+  } else if (heratRateChangerNumber <= 60) {
+    heratRateChangerNumber += change;
+  }
+
+  rate.textContent = heratRateChangerNumber;
 }
 
-setInterval(heratRateChanger, 20000);
+setInterval(heratRateChanger, 2000);
