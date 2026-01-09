@@ -14,7 +14,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
     const name = document.getElementById("name");
     clearError(name);
 
-    document.getElementById("card-name").value = name.value;
+    document.getElementById("card-name").textContent = name.value;
 
     if (name.value.length < 3) {
       errorInput(name);
@@ -25,7 +25,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
     const card = document.getElementById("card-id");
     clearError(card);
 
-    document.getElementById("id").value = card.value;
+    document.getElementById("id").textContent = card.value;
 
     if (card.value.length !== 16 || isNaN(card.value)) {
       errorInput(card);
@@ -36,7 +36,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
     const mm = document.getElementById("mm");
     clearError(mm);
 
-    document.getElementById("ma").value = card - mm.value;
+    document.getElementById("ma").textContent = mm.value;
 
     if (
       mm.value.length !== 2 ||
@@ -52,7 +52,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
     const yy = document.getElementById("yy");
     clearError(yy);
 
-    document.getElementById("yr").value = yy.value;
+    document.getElementById("yr").textContent = yy.value;
 
     if (yy.value.length !== 2 || isNaN(yy.value)) {
       errorInput(yy);
@@ -63,10 +63,16 @@ document.getElementById("form").addEventListener("submit", function (e) {
     const cvc = document.getElementById("cvc");
     clearError(cvc);
 
-    document.getElementById("cvv").value = cvc.value;
+    document.getElementById("cvv").textContent = cvc.value;
 
     if (cvc.value.length !== 3 || isNaN(cvc.value)) {
       errorInput(cvc);
     }
   }
+
+  checkName();
+  checkCard();
+  checkMonth();
+  checkYear();
+  checkCVC();
 });
