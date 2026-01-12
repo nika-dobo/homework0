@@ -195,6 +195,7 @@ input {
   font-size: 18px;
   color: #21092f;
   margin-bottom: 25px;
+  position: relative;
 }
 
 .bottom {
