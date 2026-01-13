@@ -164,7 +164,7 @@ body {
   ) !important;
 }
 
-img {
+.bk {
   position: absolute;
   z-index: -1;
   left: 0;
@@ -258,4 +258,73 @@ input:focus {
 
 #submit:hover {
   opacity: 0.9;
+}
+
+#after-reg {
+  width: 400px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+#after-reg div {
+  background: linear-gradient(#6947fb, #5f0698);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#after-reg div img {
+  width: 50px;
+}
+
+#after-reg h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+#after-reg p {
+  opacity: 0.5;
+  font-size: 1.2rem;
+}
+
+#after-reg button {
+  width: 400px;
+  height: 55px;
+  background-color: #220930;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  margin-top: 25px;
+  transition: 0.2s all;
+}
+
+#after-reg button:hover {
+  background-color: #5e1a86;
+}
+
+#after-reg button:active {
+  transform: scale(0.9) translateY(5px);
+}
+
+#scam{
+  position: absolute;
+  display: none;
+  background-color: #21092f;
+  color: white;
+  width: 400px;
+  height: 150px;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+#scam p{
+  font-size: 1.5rem;
 }

@@ -1,5 +1,8 @@
-document.getElementById("form").addEventListener("submit", function (e) {
+const form = document.getElementById("form");
+
+form.addEventListener("submit", function (e) {
   e.preventDefault();
+  let finish = [];
 
   function errorInput(input) {
     input.value = "";
@@ -15,6 +18,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
     const name = document.getElementById("name");
     const display = document.getElementById("card-name");
     clearError(name);
+    finish.push(true);
 
     display.textContent = name.value;
 
@@ -34,6 +38,8 @@ document.getElementById("form").addEventListener("submit", function (e) {
     if (name.value.length < 3 || hasNumber) {
       errorInput(name);
       display.textContent = "Jane Appleseed";
+
+      finish.push(false);
     }
   }
 
@@ -41,12 +47,15 @@ document.getElementById("form").addEventListener("submit", function (e) {
     const card = document.getElementById("card-id");
     const display = document.getElementById("id");
     clearError(card);
+    finish.push(true);
 
     display.textContent = card.value;
 
     if (card.value.length !== 16 || isNaN(card.value)) {
       errorInput(card);
       display.textContent = "0000 0000 0000 0000";
+
+      finish.push(false);
     }
   }
 
@@ -54,6 +63,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
     const mm = document.getElementById("mm");
     const display = document.getElementById("ma");
     clearError(mm);
+    finish.push(true);
 
     display.textContent = mm.value;
 
@@ -65,6 +75,8 @@ document.getElementById("form").addEventListener("submit", function (e) {
     ) {
       errorInput(mm);
       display.textContent = "00";
+
+      finish.push(false);
     }
   }
 
@@ -72,12 +84,15 @@ document.getElementById("form").addEventListener("submit", function (e) {
     const yy = document.getElementById("yy");
     const display = document.getElementById("yr");
     clearError(yy);
+    finish.push(true);
 
     display.textContent = yy.value;
 
     if (yy.value.length !== 2 || isNaN(yy.value)) {
       errorInput(yy);
       display.textContent = "00";
+
+      finish.push(false);
     }
   }
 
@@ -85,12 +100,15 @@ document.getElementById("form").addEventListener("submit", function (e) {
     const cvc = document.getElementById("cvc");
     const display = document.getElementById("cvv");
     clearError(cvc);
+    finish.push(true);
 
     display.textContent = cvc.value;
 
     if (cvc.value.length !== 3 || isNaN(cvc.value)) {
       errorInput(cvc);
       display.textContent = "000";
+
+      finish.push(false);
     }
   }
 
@@ -99,4 +117,17 @@ document.getElementById("form").addEventListener("submit", function (e) {
   checkMonth();
   checkYear();
   checkCVC();
+
+  function regComplited() {
+    done = document.getElementById("after-reg");
+    if (finish.length == 5) {
+      form.style.display = "none";
+      done.style.display = "flex";
+    }
+  }
+  regComplited();
+});
+
+document.getElementById("fin").addEventListener("click", function () {
+  document.getElementById("scam").style.display = "flex";
 });
