@@ -20,6 +20,7 @@ main {
   gap: 50px;
   margin-top: 50px;
   margin-bottom: 100px;
+  flex-wrap: wrap;
 }
 
 .main {
@@ -117,4 +118,10 @@ main #Cart p {
   font-weight: 600;
   color: #70615b;
   margin-top: 20px;
+}
+
+@media (max-width: 1000px) {
+  .main {
+    grid-template-columns: repeat(1, 300px);
+  }
 }
