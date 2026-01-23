@@ -135,6 +135,7 @@ for (let i = 0; i < addCart.length; i++) {
     addedBtn[i].style.display = "flex";
 
     currentCount = 1;
+
     countP[i].style.color = "white";
     countP[i].textContent = currentCount;
 
