@@ -7,7 +7,9 @@ let gayofa = document.getElementById("gayofa");
 let x = document.getElementById("x");
 let reset = document.getElementById("reset");
 let equal = document.getElementById("equal");
+let operation = document.getElementsByClassName("operation");
 
+let operations = ["+", "-", "*", "/", "."];
 let result = document.getElementById("res");
 
 let fin = "";
@@ -19,26 +21,21 @@ for (let i = 0; i < numbers.length; i++) {
   });
 }
 
-plus.addEventListener("click", function () {
-  fin += "+";
-  result.textContent = fin;
-});
-minus.addEventListener("click", function () {
-  fin += "-";
-  result.textContent = fin;
-});
-x.addEventListener("click", function () {
-  fin += "*";
-  result.textContent = fin;
-});
-dot.addEventListener("click", function () {
-  fin += ".";
-  result.textContent = fin;
-});
-gayofa.addEventListener("click", function () {
-  fin += "/";
-  result.textContent = fin;
-});
+for (let i = 0; i < operation.length; i++) {
+  operation[i].addEventListener("click", function (e) {
+    const currentVal = operation[i].textContent;
+    const lastChar = fin.slice(-1);
+
+    if (!operations.includes(lastChar)) {
+      fin += currentVal;
+      result.textContent = fin;
+    } else {
+      fin = fin.slice(0, -1) + currentVal;
+      result.textContent = fin;
+    }
+  });
+}
+
 delet.addEventListener("click", function () {
   fin = fin.slice(0, -1);
   result.textContent = fin;
@@ -49,11 +46,11 @@ reset.addEventListener("click", function () {
 });
 equal.addEventListener("click", function () {
   result.textContent = eval(fin);
+  fin = result.textContent;
 });
 
 let bk = document.getElementById("bk");
 let btn = document.getElementById("btn");
-let operation = document.getElementsByClassName("operation");
 
 let position = 1;
 
