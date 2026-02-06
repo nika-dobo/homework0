@@ -35,6 +35,7 @@ Finger5.addEventListener("click", function () {
     score.textContent = num;
   }
 });
+
 Finger2.addEventListener("click", function () {
   funcrendom();
   FingerDIV.style.display = "none";
@@ -58,7 +59,6 @@ Finger0.addEventListener("click", function () {
   ChoiceDiv.style.display = "flex";
   Commuterchoice.src = usrARR[randomchoice];
   MYchoice.src = usrARR[2];
-
   if (randomchoice === 0) {
     h1.textContent = "YOU LOSS";
   } else if (randomchoice === 2) {
@@ -69,10 +69,12 @@ Finger0.addEventListener("click", function () {
     score.textContent = num;
   }
 });
+
 AGAIN.addEventListener("click", function () {
   FingerDIV.style.display = "flex";
   ChoiceDiv.style.display = "none";
 });
+
 restart.addEventListener("click", function () {
   FingerDIV.style.display = "flex";
   ChoiceDiv.style.display = "none";
