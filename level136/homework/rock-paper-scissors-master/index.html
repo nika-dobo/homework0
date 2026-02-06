@@ -3,25 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
     <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
   </head>
+
   <body>
-    <div class="main">
-      <div class="scoreDiv">
-        <h1>ROCK PAPER SCISSORS</h1>
-        <div class="scoreCountDiv">
-          <p>SCORE</p>
-          <h2 id="scoreCount">0</h2>
-        </div>
+    <div class="scoreDIV">
+      <h1>ROCK PAPER SCISSORS</h1>
+      <div>
+        <p>SCORE</p>
+        <h2 id="score">0</h2>
+      </div>
+    </div>
+
+    <div class="FingerDIV" id="FingerDIV2">
+      <div class="FingerIMG">
+        <img class="finger" id="Finger5" name="Finger5" src="paper.png" />
+        <img class="finger" id="Finger2" name="Finger2" src="sizors.png" />
+      </div>
+      <img class="finger" id="Finger0" name="Finger0" src="rock.png" />
+    </div>
+
+    <div class="ChoiceDiv" id="choiceDIV2">
+      <div class="choiceIMG img1">
+        <img id="MYchoice" src="image0.png" />
+        <h2>YOU PICKED</h2>
       </div>
 
-      <div class="choiceDiv" id="choiceDiv">
-        <div>
-          <img src="paper.png" alt="paper" class="images" />
-          <img src="sizors.png" alt="scisors" class="images" />
-        </div>
-        <img src="rock.png" alt="rock" class="images" />
+      <div class="buttonDIV">
+        <h1 id="h1">you win</h1>
+        <button id="AGAIN">PLAY AGAIN</button>
+        <button id="restart">restart</button>
+      </div>
+
+      <div class="choiceIMG img2">
+        <img id="Commuterchoice" src="image2.png" />
+        <h2>THE HOUSE PICKED</h2>
       </div>
     </div>
 
