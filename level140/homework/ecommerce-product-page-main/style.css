@@ -200,6 +200,10 @@ main {
   top: 80px;
   display: none;
   max-width: 250px;
+  background-color: white;
+  border-radius: 15px;
+  border: 1px black solid;
+  padding: 15px;
 }
 
 #cartDIV h3 {
