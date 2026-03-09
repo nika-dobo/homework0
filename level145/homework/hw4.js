@@ -17,7 +17,7 @@ const {
     country,
     city: { name: cityName, street },
   },
-} = user1;
+} = user;
 
 console.log(userName);
 console.log(surname);

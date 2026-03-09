@@ -18,18 +18,16 @@ const company = {
 const {
   name: companyName,
   location: {
-    country, 
-    city: { name: cityName }, 
+    country,
+    city: { name: cityName, street },
   },
-  employees: [
-    { name: emp1Name }, 
-    { age: emp2Age },
-  ],
+  employees: [{ name: emp1Name }, { age: emp2Age }],
 } = company;
 
 console.log(companyName);
 console.log(country);
 console.log(cityName);
+console.log(street);
 console.log(emp1Name);
 console.log(emp2Age);
 
