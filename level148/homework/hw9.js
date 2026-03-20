@@ -6,7 +6,7 @@ const employees = [
   { name: "ნინო", age: 35, department: "IT", salary: 2000 },
 ];
 
-const wellPaidEmployee = employees.find((emp) => emp.salary > 1500);
+const wellPaidEmployee = employees.findIndex((emp) => emp.salary > 1500);
 
 if (wellPaidEmployee) {
   console.log(
