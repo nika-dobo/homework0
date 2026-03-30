@@ -1,3 +1,8 @@
+// 4)შექმენი კლასი Product, რომელსაც ექნება:
+
+// name, price, quantity
+// მეთოდი getTotalPrice() → აბრუნებს მთლიან ფასს(ფასი გამრავლებული ოდენობაზე)
+
 class Product {
   constructor(name, price, quantity) {
     this.name = name;

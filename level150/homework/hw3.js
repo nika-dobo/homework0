@@ -1,3 +1,10 @@
+// 3)შექმენი კლასი Calculator, რომელსაც ექნება მეთოდები:
+
+// add(a, b)
+// subtract(a, b)
+// multiply(a, b)
+// divide(a, b)
+
 class Calculator {
   add(a, b) {
     return a + b;

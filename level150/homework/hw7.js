@@ -1,3 +1,12 @@
+// 7)შექმენი კლასი Password
+
+// ქონდეს მნიშვნელობა --> value
+
+
+// მეთოდები:
+// changePassword(newPass)
+// checkPassword() --> გამოაქვს შეცვლილი პაროლი
+
 class Password {
   constructor(value) {
     this.value = value;
