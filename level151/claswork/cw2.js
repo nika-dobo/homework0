@@ -26,30 +26,31 @@ class Calculator {
   divide() {
     return this.num1 / this.num2;
   }
+
+  update(num1, num2) {
+    this.num1 = Number(num1);
+    this.num2 = Number(num2);
+  }
 }
 
 const calc = new Calculator();
 
 addBtn.addEventListener("click", () => {
-  calc.num1 = Number(number1.value);
-  calc.num2 = Number(number2.value);
+  calc.update(number1.value, number2.value);
   console.log(calc.add());
 });
 
 subtractBtn.addEventListener("click", () => {
-  calc.num1 = Number(number1.value);
-  calc.num2 = Number(number2.value);
+  calc.update(number1.value, number2.value);
   console.log(calc.subtract());
 });
 
 multiplyBtn.addEventListener("click", () => {
-  calc.num1 = Number(number1.value);
-  calc.num2 = Number(number2.value);
+  calc.update(number1.value, number2.value);
   console.log(calc.multiply());
 });
 
 divideBtn.addEventListener("click", () => {
-  calc.num1 = Number(number1.value);
-  calc.num2 = Number(number2.value);
+  calc.update(number1.value, number2.value);
   console.log(calc.divide());
 });
