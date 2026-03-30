@@ -14,5 +14,5 @@ class Password {
 }
 
 const pass = new Password("Secret123");
-pass.changePassword("NewStrongPass!45");
+pass.changePassword("NewPass");
 pass.checkPassword();
