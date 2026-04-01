@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -5,43 +7,133 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.container {
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: #0f172a;
+  background: radial-gradient(circle at top left, #1e293b, #0f172a 70%);
+  color: #fff;
 }
 
 .calculator {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  width: 400px;
 }
 
 .calculator-display {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-end;
   height: 100px;
-  background-color: #f5f5f5;
+  background: rgba(15, 23, 42, 0.7);
+  border-radius: 16px;
+  padding: 20px;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #f8fafc;
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3);
+  overflow-x: hidden;
+  letter-spacing: 2px;
 }
 
 .calculator-buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  gap: 12px;
 }
 
 .calculator-buttons button {
-  padding: 10px;
-  font-size: 20px;
+  padding: 18px 10px;
+  font-size: 1.3rem;
+  font-weight: 500;
   cursor: pointer;
+  border: none;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  font-family: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .calculator-buttons button:hover {
-  background-color: #f5f5f5;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 12px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
+.calculator-buttons button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Operator Buttons */
+#add,
+#subtract,
+#multiply,
+#divide {
+  background: rgba(139, 92, 246, 0.15);
+  color: #a78bfa;
+  box-shadow: inset 0 0 0 1px rgba(139, 92, 246, 0.3);
+}
+
+#add:hover,
+#subtract:hover,
+#multiply:hover,
+#divide:hover {
+  background: rgba(139, 92, 246, 0.25);
+  color: #c4b5fd;
+  box-shadow: inset 0 0 0 1px rgba(139, 92, 246, 0.5);
+}
+
+/* Equals Button */
+#equals {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: #ffffff;
+  box-shadow:
+    0 4px 12px rgba(37, 99, 235, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+#equals:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  box-shadow:
+    0 6px 16px rgba(37, 99, 235, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Clear Button */
+#clear {
+  color: #f87171;
+  background: rgba(239, 68, 68, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(239, 68, 68, 0.2);
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+#clear:hover {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+  box-shadow: inset 0 0 0 1px rgba(239, 68, 68, 0.4);
+}
