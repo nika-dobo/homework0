@@ -1,33 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modern To-Do List</title>
-    <link rel="stylesheet" href="cw.css">
+    <link rel="stylesheet" href="cw.css" />
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <!-- Ionicons for modern icons -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</head>
-<body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
     <div class="todo-container">
-        <div class="todo-header">
-            <h1>My Tasks</h1>
-            <p>You have <strong>0</strong> tasks left to do</p>
-        </div>
+      <div class="todo-header">
+        <h1>My Tasks</h1>
+        <p>You have <strong id="number">0</strong> tasks left to do</p>
+      </div>
 
-        <div class="todo-input-section">
-            <input type="text" placeholder="Add a new task..." id="task-input">
-            <button id="add-task-btn">
-                <ion-icon name="add-outline"></ion-icon>
-            </button>
-        </div>
+      <div class="todo-input-section">
+        <input type="text" placeholder="Add a new task..." id="task-input" />
+        <button id="add-task-btn">
+          <ion-icon name="add-outline"></ion-icon>
+        </button>
+      </div>
 
-        <ul class="todo-list">
-            <!-- <li class="todo-item">
+      <ul class="todo-list" id="todo-list">
+        <!-- <li class="todo-item">
                 <label class="checkbox-container">
                     <input type="checkbox">
                     <span class="checkmark"></span>
@@ -37,11 +45,9 @@
                     <ion-icon name="trash-outline"></ion-icon>
                 </button>
             </li> -->
-
-
-        </ul>
+      </ul>
     </div>
 
-
-</body>
+    <script src="cw.js"></script>
+  </body>
 </html>
