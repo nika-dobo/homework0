@@ -31,6 +31,40 @@ class ToDoList {
     text.textContent = this.inp.value;
     li.appendChild(text);
 
+    let editBtn = document.createElement("button");
+    editBtn.classList = "edit-btn";
+    let editIcon = document.createElement("ion-icon");
+    editIcon.name = "create-outline";
+    editBtn.appendChild(editIcon);
+    li.appendChild(editBtn);
+
+    editBtn.addEventListener("click", () => {
+      let inputField = document.createElement("input");
+      inputField.type = "text";
+      inputField.value = text.textContent;
+      inputField.classList = "edit-input";
+
+      li.replaceChild(inputField, text);
+
+      let isEditing = true;
+
+      const saveEdit = () => {
+        if (isEditing) {
+          if (inputField.value !== "") {
+            text.textContent = inputField.value;
+          }
+          li.replaceChild(text, inputField);
+          isEditing = false;
+        }
+      };
+
+      inputField.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          saveEdit();
+        }
+      });
+    });
+
     let btn = document.createElement("button");
     btn.classList = "delete-btn";
 
