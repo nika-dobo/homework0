@@ -22,10 +22,12 @@ let map = new Map([
     ["z", 30]
 ]);
 
-for (let key of map.keys()) {
+for (let {key, value} of map.keys()) {
     console.log(key);
+    console.log(value);
 }
 
-map.forEach((value) => {
+map.forEach((value, key) => {
     console.log(value);
+    console.log(key);
 });

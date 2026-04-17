@@ -28,7 +28,6 @@ map.forEach((value, key) => {
 
 console.log(newMap);
 
-// second version whit delete
 
 let map2 = new Map([
     ["apple", 5],

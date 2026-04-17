@@ -9,20 +9,14 @@
 
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 let map = new Map();
+map.set("even", []);
+map.set("odd", []);
 
 for (let number of numbers) {
     if (number % 2 === 0) {
-        if (map.has("even")) {
-            map.get("even").push(number);
-        } else {
-            map.set("even", [number]);
-        }
+        map.get("even").push(number);
     } else {
-        if (map.has("odd")) {
-            map.get("odd").push(number);
-        } else {
-            map.set("odd", [number]);
-        }
+        map.get("odd").push(number);
     }
 }
 

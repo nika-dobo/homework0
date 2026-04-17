@@ -10,7 +10,7 @@
 
 
 const map = new Map();
-map.set("name", "Goga");
+map.set("name", "goga");
 map.set("age", 20);
 
 console.log(map.get("name"));
