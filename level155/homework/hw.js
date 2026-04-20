@@ -31,4 +31,67 @@
 
 // დაწერე ფუნქცია cleanLoot(lootArray, trashSet), რომელიც გადაურბენს მოპოვებული ნივთების მასივს, ამოაგდებს ნაგავს (გამოიყენე Set.has() ოპერაციის სისწრაფისთვის) და დააბრუნებს მხოლოდ სუფთა, უნიკალური სასარგებლო ნივთების Set-ს.
 
-const player1Bag = 
+const player1Bag = new Set(["Bloodthorn", "Water", "Glowspore", "Crystal", "obsidoan"]);
+const player2Bag = new Set(["Bloodthorn", "Water", "Glowspore", "Iron", "Mana"]);
+
+function createGuildStash(bag1, bag2) {
+    let guildStash = new Set([...bag1, ...bag2]);
+    return guildStash;
+}
+
+const healthPotionRecipe = new Set(["Water", "Bloodthorn", "Crystal"]);
+
+function canCraft(recipe, stash) {
+    for (let ingredient of recipe) {
+        if (!stash.has(ingredient)) {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(canCraft(healthPotionRecipe, createGuildStash(player1Bag, player2Bag)));
+
+function getMissingIngredients(recipe, stash) {
+    let missingIngredients = new Set();
+    for (let ingredient of recipe) {
+        if (!stash.has(ingredient)) {
+            missingIngredients.add(ingredient);
+        }
+    }
+    return missingIngredients;
+}
+
+console.log(getMissingIngredients(healthPotionRecipe, createGuildStash(player1Bag, player2Bag)));
+
+function getTradeableItems(bag1, bag2) {
+    let tradeableItems = new Set();
+    for (let item of bag1) {
+        if (!bag2.has(item)) {
+            tradeableItems.add(item);
+        }
+    }
+    for (let item of bag2) {
+        if (!bag1.has(item)) {
+            tradeableItems.add(item);
+        }
+    }
+    return tradeableItems;
+}
+
+console.log(getTradeableItems(player1Bag, player2Bag));
+
+const gatheredLoot = ["Wood", "Rotten Flesh", "Bloodthorn", "Mud", "Wood", "Crystal", "Mud"];
+const trashItems = new Set(["Rotten Flesh", "Mud"]);
+
+function cleanLoot(lootArray, trashSet) {
+    let cleanLoot = new Set();
+    for (let item of lootArray) {
+        if (!trashSet.has(item)) {
+            cleanLoot.add(item);
+        }
+    }
+    return cleanLoot;
+}
+
+console.log(cleanLoot(gatheredLoot, trashItems));
