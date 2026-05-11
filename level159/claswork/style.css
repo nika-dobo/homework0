@@ -91,11 +91,13 @@ body {
   font-size: 20px;
 }
 
-.todo-items {
+#todo-items {
   width: 455px;
-  height: 50px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 25px;
   margin-top: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 #todo-items #item {
@@ -106,8 +108,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 15px;
-  margin-top: 30px;
-  margin-bottom: 10px;
 }
 
 #todo-items #item .left {
@@ -124,3 +124,8 @@ body {
   background-color: #0d0d0d;
 }
 
+#todo-items #item .right {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

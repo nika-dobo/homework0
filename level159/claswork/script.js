@@ -1,7 +1,10 @@
-const count = document.getElementById("count");
+const countDetector = document.getElementById("count");
 const formTodo = document.getElementById("form-todo");
 const todoItems = document.getElementById("todo-items");
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+let doneTasks = 0;
+let totalTasks = JSON.parse(localStorage.getItem("tasks")).length || 0;
 
 function createToduItem(inpTxt) {
   let main_div = document.createElement("div");
@@ -41,12 +44,16 @@ function createToduItem(inpTxt) {
 
 formTodo.addEventListener("submit", (e) => {
   e.preventDefault();
-  let textInput = e.target.todo_item_text.value;
+  let textInput = e.target.todo_item_text.value.trim();
+  if (textInput === "") return;
   tasks.push(textInput);
   localStorage.setItem("tasks", JSON.stringify(tasks));
   createToduItem(textInput);
+  totalTasks++;
+  countDetector.textContent = `${doneTasks}/${totalTasks}`;
 });
 
 for (let i = 0; i < tasks.length; i++) {
   createToduItem(tasks[i]);
+  countDetector.textContent = `${doneTasks}/${totalTasks}`;
 }
