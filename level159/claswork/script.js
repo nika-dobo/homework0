@@ -1,6 +1,7 @@
 const countDetector = document.getElementById("count");
 const formTodo = document.getElementById("form-todo");
 const todoItems = document.getElementById("todo-items");
+const deleteAllBtn = document.getElementById("btn-delete-all");
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
 let doneTasks = 0;
@@ -35,6 +36,16 @@ function createToduItem(inpTxt) {
   del.src = "img/delete.svg";
   del.id = "delete";
 
+  function deleteItem() {
+    main_div.remove();
+    tasks = tasks.filter((task) => task !== p.textContent);
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    totalTasks--;
+    countDetector.textContent = `${doneTasks}/${totalTasks}`;
+  }
+
+  del.addEventListener("click", deleteItem);
+
   right.appendChild(edit);
   right.appendChild(del);
   main_div.appendChild(right);
@@ -45,11 +56,21 @@ function createToduItem(inpTxt) {
 formTodo.addEventListener("submit", (e) => {
   e.preventDefault();
   let textInput = e.target.todo_item_text.value.trim();
-  if (textInput === "") return;
+  if (textInput === "" || tasks.includes(textInput)) return;
+  e.target.todo_item_text.value = "";
   tasks.push(textInput);
   localStorage.setItem("tasks", JSON.stringify(tasks));
   createToduItem(textInput);
   totalTasks++;
+  countDetector.textContent = `${doneTasks}/${totalTasks}`;
+});
+
+deleteAllBtn.addEventListener("click", () => {
+  todoItems.innerHTML = "";
+  tasks = [];
+  totalTasks = 0;
+  doneTasks = 0;
+  localStorage.setItem("tasks", JSON.stringify(tasks));
   countDetector.textContent = `${doneTasks}/${totalTasks}`;
 });
 

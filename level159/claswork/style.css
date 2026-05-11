@@ -96,7 +96,7 @@ body {
   display: flex;
   flex-direction: column-reverse;
   gap: 25px;
-  margin-top: 50px;
+  margin-top: 40px;
   margin-bottom: 25px;
 }
 
@@ -128,4 +128,59 @@ body {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+#btn-delete-all {
+  margin-bottom: 15px;
+  padding: 5px;
+  width: 455px;
+  border-radius: 7px;
+  background-color: #88ab33;
+  border: none;
+  font-size: 20px;
+  transition: 0.2s all;
+  letter-spacing: 3px;
+}
+
+#btn-delete-all:hover {
+  background-color: rgb(170, 9, 9);
+  cursor: pointer;
+}
+
+#btn-delete-all:active {
+  transform: scale(0.98);
+}
+
+#todo-items #item #delete:hover {
+  cursor: pointer;
+}
+
+#todo-items #item #delete:active {
+  transform: scale(0.95);
+}
+
+#todo-items #item #edit:hover {
+  cursor: pointer;
+}
+
+#todo-items #item #edit:active {
+  transform: scale(0.95);
+}
+
+#add:hover {
+  background-color: #6b8f29;
+  cursor: pointer;
+}
+
+#add:active {
+  transform: scale(0.95);
+}
+
+#todo-items #item #todo_items_left:hover {
+  background-color: #6b8f29;
+  cursor: pointer;
+}
+
+#todo-items #item #todo_items_left:active {
+  transform: scale(0.95);
 }
