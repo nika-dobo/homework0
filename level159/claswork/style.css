@@ -96,7 +96,7 @@ body {
   display: flex;
   flex-direction: column-reverse;
   gap: 25px;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 25px;
 }
 
@@ -183,4 +183,21 @@ body {
 
 #todo-items #item #todo_items_left:active {
   transform: scale(0.95);
+}
+
+#sort {
+  width: 455px;
+  border-radius: 11px;
+  background: #1f2937;
+  padding: 10px 15px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  transition: 0.2s all;
+}
+
+#sort:hover {
+  cursor: pointer;
+  background-color: #263242;
 }
