@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>todo</title>
+  </head>
+  <body>
+    <div class="todo">
+      <img src="img/mark.svg" alt="" class="main-img" />
+      <h1 class="main-title">TODO</h1>
+    </div>
+
+    <div class="todo-item">
+      <h2>Task Done <br /><span>Keep it up</span></h2>
+      <p id="count">0/0</p>
+    </div>
+
+    <button id="btn-delete-all">Delete All</button>
+
+    <form id="form-todo">
+      <input
+        type="text"
+        name="todo_item_text"
+        id="input"
+        placeholder="Write your todo..."
+        autocomplete="off"
+      />
+      <button type="submit" id="add">+</button>
+    </form>
+
+    <select name="sort" id="sort">
+      <option value="all">All</option>
+      <option value="complited">Complited</option>
+      <option value="not-complited">Not Complited</option>
+    </select>
+
+    <div id="todo-items">
+      <!-- <div id="item">
+        <div class="left">
+          <button id="todo_items_left"></button>
+          <p id="text-todo">Test</p>
+        </div>
+
+        <div class="btn-right">
+          <img src="img/edit.svg" alt="" id="edit" />
+          <img src="img/delete.svg" alt="" id="delete" />
+        </div>
+      </div> -->
+    </div>
+
+    <p class="txt">Seems lonely in here, what are you up to?</p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
