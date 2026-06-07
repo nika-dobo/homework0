@@ -3,62 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="cw.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
+
     <div class="left">
-      <p id="temp">16</p>
-      <div class="cels">
-        <p id="city">Tbilisim</p>
-        <p id="time">06:09 - monday, 9 sep, 2026</p>
+      <div class="temp-container">
+        <span id="temp">##°</span>
       </div>
-      <img src="" alt="" id="weathericon">
+      <div class="city-info">
+        <h1 id="city-name">City Name</h1>
+        <p id="time">HH:MM - DAY, DD MON YY</p>
+      </div>
+      <img id="weather-icon" src="" alt="">
     </div>
 
     <div class="right">
-      <form action="">
+      <form id="search-form" action="">
         <input
           type="text"
           name="city"
           id="city-input"
-          placeholder="search location..."
+          placeholder="Search Location..."
         />
+        <button type="submit" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
       </form>
-      <p>weather details...</p>
 
-      <p id="weather"></p>
+      <div class="details-section">
+        <h3>Weather Details...</h3>
+        <p id="weather" class="weather-desc">THUNDERSTORM WITH LIGHT DRIZZLE</p>
 
-      <div>
-        <p>tempurature in celsius</p>
-        <p id="temcels"></p>
-        <img src="" alt="" />
+        <ul class="details-list">
+          <li>
+            <span class="label">Temp max</span>
+            <span class="value"><span id="temp-max">##°</span> <i class="fa-solid fa-temperature-half icon-red"></i></span>
+          </li>
+          <li>
+            <span class="label">Temp min</span>
+            <span class="value"><span id="temp-min">##°</span> <i class="fa-solid fa-temperature-half icon-blue"></i></span>
+          </li>
+          <li>
+            <span class="label">Humidity</span>
+            <span class="value"><span id="humidity">##%</span> <i class="fa-solid fa-droplet icon-white"></i></span>
+          </li>
+          <li>
+            <span class="label">Cloudy</span>
+            <span class="value"><span id="cloudy">##%</span> <i class="fa-solid fa-cloud icon-white"></i></span>
+          </li>
+          <li>
+            <span class="label">Wind</span>
+            <span class="value"><span id="wind">##km/h</span> <i class="fa-solid fa-wind icon-white"></i></span>
+          </li>
+        </ul>
       </div>
-
-      <div>
-        <p>temperature in fahrenheit</p>
-        <p id="temfah"></p>
-        <img src="" alt="" />
-      </div>
-
-      <div>
-        <p>humidity</p>
-        <p id="humidity"></p>
-        <img src="" alt="" />
-      </div>
-
-      <div>
-        <p>cloudy</p>
-        <p id="cloudy"></p>
-        <img src="" alt="" />
-      </div>
-
-      <div>
-        <p>wind</p>
-        <p id="wind"></p>
-        <img src="" alt="" />
-      </div>
-    </div>
 
     <script src="cw.js"></script>
   </body>
