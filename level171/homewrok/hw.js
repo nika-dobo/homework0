@@ -11,11 +11,26 @@ const timeDisplay = document.getElementById("time");
 const weatherIcon = document.getElementById("weather-icon");
 
 function weatherapi(city) {
-  let http = new XMLHttpRequest();
+  let myPromise = new Promise(function (resolve, reject) {
+    let http = new XMLHttpRequest();
+    let api = `http://api.weatherapi.com/v1/current.json?key=c8ced2d4f4a741e597a174639260106&q=${city}&aqi=no`;
 
-  http.onreadystatechange = function () {
-    if (this.readyState === 4 && this.status === 200) {
-      let response = JSON.parse(this.responseText);
+    http.onreadystatechange = function () {
+      if (this.readyState === 4) {
+        if (this.status === 200) {
+          resolve(JSON.parse(this.responseText));
+        } else {
+          reject("Error fetching weather data");
+        }
+      }
+    };
+
+    http.open("GET", api);
+    http.send();
+  });
+
+  myPromise
+    .then((response) => {
       h1City.textContent = response.location.name;
       mainTemp.textContent = `${response.current.temp_c}°`;
       wind.textContent = `${response.current.wind_kph}km/h`;
@@ -38,13 +53,8 @@ function weatherapi(city) {
         });
 
       console.log(response);
-    }
-  };
-
-  let api = `http://api.weatherapi.com/v1/current.json?key=c8ced2d4f4a741e597a174639260106&q=${city}&aqi=no`;
-
-  http.open("GET", api);
-  http.send();
+    })
+    .catch((error) => console.error(error));
 }
 
 form.addEventListener("submit", (e) => {
