@@ -1,1 +1,1 @@
-console.log("make another time");
+console.log("no homework ");
