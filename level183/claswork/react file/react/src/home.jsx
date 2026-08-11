@@ -1,5 +1,6 @@
 import "./style.css";
 import Header from "./header";
+import Footer from "./footer";
 
 function App() {
   return (
@@ -37,10 +38,9 @@ function App() {
         alt=""
         width="520px"
       />
+      <Footer />
     </>
   );
 }
 
-
 export default App;
-
