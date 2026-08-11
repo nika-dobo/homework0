@@ -1,8 +1,10 @@
 import "./style.css";
+import Header from "./header";
 
 function App() {
   return (
     <>
+      <Header />
       <h1>hello my beautiful world</h1>
       <div className="video">
         <iframe
