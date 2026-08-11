@@ -68,3 +68,21 @@ h1 {
   gap: 50px;
   list-style-type: none;
 }
+
+.card {
+  background-color: rgb(155, 26, 26);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: start;
+}
+.card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
