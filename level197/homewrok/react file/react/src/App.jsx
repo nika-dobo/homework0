@@ -12,13 +12,6 @@ function App() {
 
   let [selectedMovie, setSelectedMovie] = useState(null);
 
-  // function henlder(id){
-  //   let movie = movies.find((movie)=>{
-  //     movie.id === id
-  //   })
-  //   setSelectedMovie(movie)
-  // }
-
   return (
     <>
       <MovieList movies={movies} onSelect={setSelectedMovie} />
