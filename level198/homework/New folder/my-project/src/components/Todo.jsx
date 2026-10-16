@@ -37,8 +37,7 @@ function Todo({ task }) {
         <h1>Status</h1>
         <h1>Action</h1>
       </div>
-      {task &&
-        task.map((itme, index) => {
+      {task.map((itme, index) => {
           return <TodoItem key={index} itme={itme} index={index} />;
         })}
     </div>
