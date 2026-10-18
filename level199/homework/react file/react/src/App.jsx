@@ -14,15 +14,23 @@ function App() {
   return (
     <>
       <Hw1 />
+      <br />
       <Hw2 />
+      <br />
       <Hw3 />
-      <Hw3 />
+      <br />
       <Hw4 />
+      <br />
       <Hw5 />
+      <br />
       <Hw6 />
+      <br />
       <Hw7 />
+      <br />
       <Hw8 />
+      <br />
       <Hw9 />
+      <br />
       <Hw10 />
     </>
   );
