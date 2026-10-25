@@ -1,11 +1,12 @@
 import Box from "./components/Box";
 import Header from "./components/header";
-import products from "./components/script";
+import mainArr from "./components/script";
 import { useState } from "react";
 
 function App() {
   let [choosedProducts, setChoosedProducts] = useState([]);
-  
+  let [page, setPage] = useState([]);
+  console.log(mainArr);
 
   return (
     <>
@@ -19,21 +20,24 @@ function App() {
           <h1 className="text-3xl font-bold text-gray-800">
             სუპერმარკეტის პროდუქტები
           </h1>
-          <p className="text-gray-500 mt-2">სულ: {products.length} პროდუქტი</p>
         </div>
         <div className="flex w-full justify-center items-stretch gap-6 flex-wrap max-w-7xl mx-auto">
-          {products.map((product) => (
-            <Box
-              key={product.id}
-              title={product.title}
-              description={product.description}
-              price={product.price}
-              imgUrl={product.imgUrl}
-              setChoosedProducts={setChoosedProducts}
-              product={product}
-              choosedProducts={choosedProducts}
-            />
-          ))}
+          {mainArr.map((page) =>
+            page.map((obj) => {
+              return (
+                <Box
+                  key={obj.id}
+                  title={obj.title}
+                  description={obj.description}
+                  price={obj.price}
+                  imgUrl={obj.imgUrl}
+                  setChoosedProducts={setChoosedProducts}
+                  product={obj}
+                  choosedProducts={choosedProducts}
+                />
+              );
+            }),
+          )}
         </div>
       </div>
     </>
