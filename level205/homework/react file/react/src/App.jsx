@@ -1,5 +1,5 @@
 import Box from "./components/Box";
-import Header from "./components/header";
+import Header from "./components/Header";
 import mainArr from "./components/script";
 import { useState } from "react";
 
