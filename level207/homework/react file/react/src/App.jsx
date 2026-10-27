@@ -21,6 +21,15 @@ function App() {
             სუპერმარკეტის პროდუქტები
           </h1>
         </div>
+        <div className="flex justify-between">
+          <button>sort</button>
+
+          <div>
+            <button>-5</button>
+            <button>5-15</button>
+            <button>15+</button>
+          </div>
+        </div>
         <div className="flex w-full justify-center items-stretch gap-6 flex-wrap max-w-7xl mx-auto">
           {/* {mainArr.map((page) =>
             page.map((obj) => {
