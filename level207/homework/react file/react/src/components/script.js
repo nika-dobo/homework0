@@ -447,19 +447,6 @@ const products = [
   },
 ];
 
-export let mainArr = [];
 
-let elems = 0;
-for (let i = 0; i <= products.length / 12; i++) {
-  let newArr = [];
-  for (let j = 0; j < 12; j++) {
-    let index = j + elems;
-    if (index < products.length) {
-      newArr.push(products[index]);
-    }
-  }
-  mainArr.push(newArr);
-  elems += 12;
-}
 
-export default mainArr;
+export default products;
