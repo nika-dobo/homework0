@@ -30,7 +30,7 @@ const Box = ({
     <div className="w-80 flex flex-col justify-between bg-white border border-gray-200 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
       <button
         className="cursor-pointer"
-        // onClick={bool ? setBool(false) : setBool(true)}
+        //onClick={bool ? setBool(false) : setBool(true)}
       >
         edit
       </button>

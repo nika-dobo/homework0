@@ -1,15 +1,28 @@
 import React from "react";
 
 function Edit({ bool }) {
-
-
+  function turnOff(e) {
+    e.preventDefault();
+    if (bool) {
+      bool = false;
+    } else {
+      bool = true;
+    }
+    console.log("Sadas");
     
+  }
+
   return (
     <>
       <form
         className={`fixed w-150 h-110 z-10 left-[30%] top-25 ${bool ? "flex" : "hidden"} bg-blue-600 gap-2.5 justify-around flex-col items-center rounded-md`}
       >
-        <button className="absolute top-2 right-2 text-lg cursor-pointer">❌</button>
+        <button
+          className="absolute top-2 right-2 text-lg cursor-pointer"
+          onClick={turnOff}
+        >
+          ❌
+        </button>
         <h2 className="text-white text-xl">პროდუქტის შეცვლა</h2>
         <input
           type="text"
