@@ -13,7 +13,7 @@ const Box = ({
   mainProduts,
   setMainProduts,
 }) => {
-  let [bool, setBool] = useState(true);
+  let [bool, setBool] = useState(false);
   let [takeInfo, setTakeInfo] = useState({});
 
   function addProduct() {
@@ -24,14 +24,9 @@ const Box = ({
     }
   }
 
-  function showEdit() {}
-
   return (
     <div className="w-80 flex flex-col justify-between bg-white border border-gray-200 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-      <button
-        className="cursor-pointer"
-        //onClick={bool ? setBool(false) : setBool(true)}
-      >
+      <button className="cursor-pointer" onClick={() => setBool(true)}>
         edit
       </button>
       <div>
@@ -61,7 +56,13 @@ const Box = ({
           </button>
         </div>
       </div>
-      <Edit bool={bool} setTakeInfo={setTakeInfo} />
+      <Edit
+        bool={bool}
+        setBool={setBool}
+        product={product}
+        setMainProduts={setMainProduts}
+        setChoosedProducts={setChoosedProducts}
+      />
     </div>
   );
 };
