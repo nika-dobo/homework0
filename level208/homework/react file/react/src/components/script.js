@@ -51,7 +51,7 @@ const products = [
       "ტრადიციული რაჭული ლობიანი შებოლილი ლორითა და სურნელოვანი სანელებლებით შეზავებული ლობიოს გულსართით.",
     price: "6.00",
     imgUrl:
-      "https://gastronomia.ge/wp-content/uploads/2019/01/50905754_289663541748931_5195439139868114944_n.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8wAWbn3hV_QyzOHDijVez5yhAes128vGPqoXJWqpWca4yCb2IXKWIktei&s=10",
   },
   {
     id: 7,
@@ -446,7 +446,5 @@ const products = [
       "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80",
   },
 ];
-
-
 
 export default products;

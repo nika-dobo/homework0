@@ -1,4 +1,8 @@
+import { useState } from "react";
+import Edit from "./Edit";
+
 const Box = ({
+  key,
   title,
   description,
   price,
@@ -6,7 +10,12 @@ const Box = ({
   setChoosedProducts,
   choosedProducts,
   product,
+  mainProduts,
+  setMainProduts,
 }) => {
+  let [bool, setBool] = useState(true);
+  let [takeInfo, setTakeInfo] = useState({});
+
   function addProduct() {
     if (choosedProducts.some((p) => p.id === product.id)) {
       return;
@@ -15,8 +24,16 @@ const Box = ({
     }
   }
 
+  function showEdit() {}
+
   return (
     <div className="w-80 flex flex-col justify-between bg-white border border-gray-200 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+      <button
+        className="cursor-pointer"
+        // onClick={bool ? setBool(false) : setBool(true)}
+      >
+        edit
+      </button>
       <div>
         <img
           src={imgUrl}
@@ -44,6 +61,7 @@ const Box = ({
           </button>
         </div>
       </div>
+      <Edit bool={bool} setTakeInfo={setTakeInfo} />
     </div>
   );
 };

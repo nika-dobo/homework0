@@ -1,3 +1,4 @@
+import AddProduct from "./components/AddProduct";
 import Box from "./components/Box";
 import Header from "./components/Header";
 import products from "./components/script";
@@ -5,9 +6,12 @@ import { useEffect, useState } from "react";
 
 function App() {
   let [choosedProducts, setChoosedProducts] = useState([]);
+  let [mainProduts, setMainProduts] = useState(products);
   let [page, setPage] = useState([]);
   let [pageNumber, setPageNumber] = useState(0);
   let [buttonSort, setButtonSort] = useState("sort");
+
+  let [bool, setBool] = useState(false);
 
   function pageGenarate(products) {
     let mainArr = [];
@@ -29,9 +33,9 @@ function App() {
   }
 
   useEffect(() => {
-    let mainArr = pageGenarate(products);
+    let mainArr = pageGenarate(mainProduts);
     setPage(mainArr);
-  }, []);
+  }, [mainProduts]);
 
   function sort() {
     if (buttonSort === "sort") {
@@ -57,15 +61,15 @@ function App() {
   }
 
   function all() {
-    setPage(pageGenarate(products));
+    setPage(pageGenarate(mainProduts));
     setPageNumber(0);
   }
 
   function five() {
     let newArr = [];
-    for (let i = 0; i < pageGenarate(products).length; i++) {
+    for (let i = 0; i < pageGenarate(mainProduts).length; i++) {
       newArr.push(
-        pageGenarate(products)[i].filter((obj) => Number(obj.price) <= 5),
+        pageGenarate(mainProduts)[i].filter((obj) => Number(obj.price) <= 5),
       );
     }
     console.log(newArr);
@@ -83,9 +87,9 @@ function App() {
 
   function fiveToFiveteen() {
     let newArr = [];
-    for (let i = 0; i < pageGenarate(products).length; i++) {
+    for (let i = 0; i < pageGenarate(mainProduts).length; i++) {
       newArr.push(
-        pageGenarate(products)[i].filter(
+        pageGenarate(mainProduts)[i].filter(
           (obj) => Number(obj.price) > 5 && Number(obj.price) <= 15,
         ),
       );
@@ -104,9 +108,9 @@ function App() {
 
   function FiveteenPluss() {
     let newArr = [];
-    for (let i = 0; i < pageGenarate(products).length; i++) {
+    for (let i = 0; i < pageGenarate(mainProduts).length; i++) {
       newArr.push(
-        pageGenarate(products)[i].filter((obj) => Number(obj.price) > 15),
+        pageGenarate(mainProduts)[i].filter((obj) => Number(obj.price) > 15),
       );
     }
     console.log(newArr);
@@ -121,13 +125,34 @@ function App() {
     setPage(pageGenarate(finalArr));
   }
 
+  function serch(e) {
+    let product = [];
+
+    for (let i of mainProduts) {
+      if (i.title.includes(e.target.value)) {
+        product.push(i);
+      }
+    }
+    setPage(pageGenarate(mainProduts));
+
+    if (e.target.value !== "") {
+      setPage(pageGenarate(product));
+    }
+  }
+
   return (
     <>
       <Header
         choosedProducts={choosedProducts}
         setChoosedProducts={setChoosedProducts}
+        setBool={setBool}
+        bool={bool}
       />
-
+      <AddProduct
+        bool={bool}
+        setMainProduts={setMainProduts}
+        mainProduts={mainProduts}
+      />
       <div className="min-h-screen bg-gray-50 py-10 px-4 flex flex-col items-center gap-10">
         <div className="max-w-7xl mx-auto mb-8 text-center">
           <h1 className="text-3xl font-bold text-gray-800">
@@ -141,7 +166,12 @@ function App() {
           >
             {buttonSort}
           </button>
-
+          <input
+            type="text"
+            className="bg-blue-600 w-100 rounded-md p-2.5 placeholder:text-white text-white"
+            placeholder="პროდუქტის სახელი"
+            onChange={serch}
+          />
           <div className="flex gap-2.5">
             <button
               onClick={all}
@@ -181,6 +211,8 @@ function App() {
                 setChoosedProducts={setChoosedProducts}
                 product={obj}
                 choosedProducts={choosedProducts}
+                mainProduts={mainProduts}
+                setMainProduts={setMainProduts}
               />
             );
           })}
