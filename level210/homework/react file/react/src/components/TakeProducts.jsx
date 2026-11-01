@@ -5,6 +5,7 @@ function ProductItem({ product, onIncrease, onDecrease, onDelete }) {
   const count = product.count || 1;
 
   return (
+    
     <div className="flex gap-5 max-w-full w-full justify-start items-end p-5 relative">
       <img src={product.imgUrl} alt="" className="w-15 h-15 rounded-md" />
       <div className="flex flex-col justify-start gap-2">
